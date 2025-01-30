@@ -3,6 +3,16 @@ Final Project for Tufts Graduate Course on Bayesian Deep Learning (CS-152)
 
 #### This was a joint project, co-authored by Maha Mapara and Tina Wu.
 
+Motivation:
+- Diffusion models are currently an exciting area of research in generative models, especially for image synthesis tasks; many popular architectures use diffusion models for this purpose, like DALLE-2 and Imagen. This was a good opportunity to gain in-depth exposure about the architecture and modeling approach used for diffusion models. In particular, we were inspired by the paper ‘Diffusion Models Beat GAN on Image Synthesis’ [Dhariwal and Nichol (2021)], where the authors compare DDPM performance with GANs on image synthesis using ImageNet and LSUN image data. Instead of comparing DDPM to GAN, we compared diffusion models with VAEs. This is because:
+  1. We have not seen a comparison between VAE and diffusion models in the literature on our choice of data sets.
+  2. The models have some similarities:
+    • Forward process that turns data into latent representations
+    • Reverse process that involves sampling some latent variable
+    • Training objective which is a lower bound on data likelihood
+  3. It would be interesting to see how different the model performances are, and evaluate the expected underperformance of VAEs based on our understanding of the key differences between DDPMs and VAEs.
+
+
 Goal: 
 - Understand how Denoising Diffusion Probabilistic Models (DDPM) work and explore its advantages and limitations by comparing its performance against Variational Auto Encoders (VAE) on image generation tasks across 2 data sets, MNIST and CIFAR10.
 
